@@ -23,6 +23,7 @@ const Headwrapper = styled.div`
 	  -webkit-backdrop-filter: blur(10px);
 	  backdrop-filter: blur(10px); */
     .logo-wrapper {
+      margin-right: 40px;
       .go-home {
         cursor: pointer;
         height: 65px;

@@ -18,3 +18,30 @@ a button {
   padding: 0;
   background: transparent;
 }
+
+.flex {
+  display: flex;
+}
+
+.f-c {
+  @extend .flex;
+  align-items: center;
+}
+.f-c-c {
+  @extend .f-c;
+  justify-content: center;
+}
+
+.f-c-s {
+  @extend .f-c;
+  justify-content: space-between;
+}
+
+.f-c-a {
+  @extend .f-c;
+  justify-content: space-around;
+}
+.f-c-sa {
+  @extend .f-c;
+  justify-content: flex-start;
+}
