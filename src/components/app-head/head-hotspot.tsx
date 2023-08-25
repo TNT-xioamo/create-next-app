@@ -1,4 +1,6 @@
 import React, { type PropsWithChildren, memo } from 'react'
+import { AiOutlineClose } from 'react-icons/ai'
+
 import { Activitywrapper } from './head-style'
 
 export default memo(function Headactivity({ children }: PropsWithChildren<{}>) {
@@ -8,11 +10,15 @@ export default memo(function Headactivity({ children }: PropsWithChildren<{}>) {
 
   const click_activity = () => {}
 
+  const click_cancel = () => {}
+
   return (
     <>
-      <Activitywrapper img1={img1} img2={img2}>
-        <div onClick={ () => click_activity() }>
-          <div></div>
+      <Activitywrapper $img1={img1} $img2={img2}>
+        <div className='activity-wrapper' onClick={ () => click_activity() }>
+          <div className='wrapper-content'>
+            <AiOutlineClose className='content-cancel' onClick={() => click_cancel()} />
+          </div>
         </div>
       </Activitywrapper>
     </>
