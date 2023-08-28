@@ -4,6 +4,8 @@ import { Headwrapper } from './head-style'
 
 import HeadLogo from './head-logo'
 import HeadMenuWrapper from './head-menu'
+import HeadInquireWrapper from './head-inquire'
+import HeadnrollloginWrapper from './head-enroll-login'
 
 export default memo(function AppHeadwrapper(props: PropsWithChildren<{}>) {
   return(
@@ -12,6 +14,8 @@ export default memo(function AppHeadwrapper(props: PropsWithChildren<{}>) {
         <div className='wrappe-content f-c-sa'>
           <HeadLogo />
           <HeadMenuWrapper />
+          <HeadInquireWrapper />
+          <HeadnrollloginWrapper />
         </div>
       </Headwrapper>
     </>

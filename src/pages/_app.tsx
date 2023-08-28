@@ -4,6 +4,7 @@ import Layout from '../layouts/app-basic'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import '../styles/global.scss'
+import '../styles/animate.css'
 
 import { ConfigProvider } from 'antd'
 import theme from '../theme/theme-config'

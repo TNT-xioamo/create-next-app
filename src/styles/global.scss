@@ -18,7 +18,7 @@ a button {
   padding: 0;
   background: transparent;
 }
-
+ // flex
 .flex {
   display: flex;
 }
@@ -31,7 +31,10 @@ a button {
   @extend .f-c;
   justify-content: center;
 }
-
+.f-c-c-1 {
+  @extend .f-c-c;
+  flex: 1
+}
 .f-c-s {
   @extend .f-c;
   justify-content: space-between;
@@ -44,4 +47,10 @@ a button {
 .f-c-sa {
   @extend .f-c;
   justify-content: flex-start;
+}
+
+
+// 鼠标
+.mouse-p {
+  cursor: pointer;
 }

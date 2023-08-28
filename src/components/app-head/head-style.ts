@@ -40,12 +40,27 @@ const Headwrapper = styled.div`
         }
       }
     }
+    .ant-form-item{
+      margin-bottom: 0;
+    }
   }
 `
 
-const Menuwrapper = styled.div``
+const Menuwrapper = styled.div`
+  display: flex;
+  flex: 1;
+  .hover-color:hover {
+    color: #287ef1;
+  }
+`
 
 const Activitywrapper = styled.div<Custom>`
+  > :hover {
+    -webkit-animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
   .activity-wrapper {
     background-color: #fff;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
