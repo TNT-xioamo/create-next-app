@@ -3,13 +3,14 @@ import Head from 'next/head'
 import Layout from '../layouts/app-basic'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import { StoreProvider } from '@/store'
 import '../styles/global.scss'
 import '../styles/animate.css'
 
 import { ConfigProvider } from 'antd'
 import theme from '../theme/theme-config'
 
-const defaultTitle = 'React App with Next.js'
+const defaultTitle = 'React App'
 
 type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: JSX.Element, props: P) => JSX.Element;
@@ -37,7 +38,9 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
       </Head>
       <ConfigProvider theme={theme}>
-        {getLayout(<Component {...pageProps} />, pageProps)}
+        <StoreProvider initialValue={{ user: {} }}>
+          {getLayout(<Component {...pageProps} />, pageProps)}
+        </StoreProvider>
       </ConfigProvider>
     </Fragment>
   );

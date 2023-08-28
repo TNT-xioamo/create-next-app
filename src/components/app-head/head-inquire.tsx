@@ -14,6 +14,11 @@ export default memo(function HeadInquireWrapper (props: PropsWithChildren<{}>) {
   const _setSearchValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value.replace(/^\s*|\s*$/g, ''))
   }
+
+  const _render_suggest_card = () => {
+    
+  }
+
   return (
     <>
       <Form className="head-inquire f-c-c">
