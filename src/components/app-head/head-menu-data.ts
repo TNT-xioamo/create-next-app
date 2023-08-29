@@ -1,5 +1,11 @@
 
-
+const hotButton = [
+  {
+    key: '1',
+    label: '热门',
+    menuitems: 'hot'
+  }
+]
 
 const MenuOption = [
   {

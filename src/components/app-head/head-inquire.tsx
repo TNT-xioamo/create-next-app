@@ -8,7 +8,7 @@ import { useStore } from '@/store'
 import  { Inquirewrapper } from './head-style'
 import useClickOut from '@/hooks/use-click-out'
 
-function HeadInquireWrapper (props: PropsWithChildren<{}>) {
+function HeadInquireWrapper (props: PropsWithChildren<{}>): JSX.Element {
 
   const { systemStore } = useStore()
 
