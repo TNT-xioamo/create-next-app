@@ -1,3 +1,2 @@
-export { default as Logo } from './Logo'
-export { default as Link } from './Link'
 export { default as AppHeadMain } from './app-head'
+export { default as AppPageMain } from './app-page'

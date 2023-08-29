@@ -1,9 +1,11 @@
 import React, { memo, type PropsWithChildren} from 'react'
-import AppHeadMain from '@/components/app-head'
+import { AppPageMain } from '@/components'
 
 export default memo(function AppHomePage(props: PropsWithChildren): JSX.Element {
   return (
     <div>
-      <AppHeadMain />
+      <AppPageMain center>
+        首页
+      </AppPageMain>
     </div>
 )})
