@@ -9,7 +9,7 @@ export default memo(function HeadLogo(props: PropsWithChildren<{}>) {
       <div className='logo-wrapper'>
         <a className='go-home' href="/">
           <h1 className='logo-title'>天空之城</h1>
-          <img className='head-logo' src={logo.src} alt="logo" />
+          <img className='head-logo' src = { logo.src } alt="logo" />
         </a>
       </div>
     </>

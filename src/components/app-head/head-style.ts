@@ -6,10 +6,9 @@ type Custom = {
 //  @extend .logo-wrapper;
 const Headwrapper = styled.div`
   height: 65px;
-  background: #edc0bf;
-  /* background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
-  font-family: Avenir,Helvetica,Arial,sans-serif !important; */
-  background: rgba(255, 255, 255, .7);
+  /* background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%); */
+  font-family: Avenir,Helvetica,Arial,sans-serif !important;
+  /* background: rgba(255, 255, 255, .7); */
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
   border-bottom: 1px solid #eaeaea;

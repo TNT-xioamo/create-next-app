@@ -8,7 +8,7 @@ export default memo(function HeadnrollloginWrapper (props: PropsWithChildren<{}>
   }
   return (
     <>
-      <Button type="text" onClick={() => {}}>登录 ｜ 注册</Button>
+      <Button type="text" onClick={() => _go_to_login()}>登录 ｜ 注册</Button>
     </>
   )
 })

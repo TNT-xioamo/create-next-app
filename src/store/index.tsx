@@ -2,19 +2,19 @@ import React, { createContext, useContext, ReactElement } from 'react'
 
 import { useLocalObservable, enableStaticRendering } from 'mobx-react-lite'
 
-import createStore, { IStore } from './rootStore'
+import createStore, { IStore } from './root-store'
 
 interface IProps {
   initialValue: Record<any, any>
   children: ReactElement
 }
 
-enableStaticRendering(!process.browser)
+enableStaticRendering(!process.browser || typeof window === 'undefined')
 
 const StoreContext = createContext({})
 
 export const StoreProvider = ({ initialValue, children }: IProps) => {
-  const store = useLocalObservable(() => createStore(initialValue))
+  const store = useLocalObservable(createStore(initialValue))
   return (
     <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
   )
