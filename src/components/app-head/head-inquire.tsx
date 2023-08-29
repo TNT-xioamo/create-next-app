@@ -8,6 +8,8 @@ import { useStore } from '@/store'
 import  { Inquirewrapper } from './head-style'
 import useClickOut from '@/hooks/use-click-out'
 
+import { hotButton } from './head-menu-data'
+
 function HeadInquireWrapper (props: PropsWithChildren<{}>): JSX.Element {
 
   const { systemStore } = useStore()
@@ -37,9 +39,16 @@ function HeadInquireWrapper (props: PropsWithChildren<{}>): JSX.Element {
   }
 
   const _render_suggest_card = () => {
-    const title: ReactNode = <div><FaHotjar color='#ff8907' />热门搜索</div>
+    const title: ReactNode = <div><FaHotjar color='#ff8907' /> 热门搜索</div>
     return (
-      <Card title={ title } className='pos-card  scale-up-center'> 土建 </Card>
+      <Card title={ title } className='pos-card  scale-up-center'>
+        <div className='card-wrap'>
+          { hotButton.map((item) => {
+            return ( <Button key={item.key} type='default' size='small' shape='round' onClick={() => _search_query()}>{item.label}</Button> )
+          })
+          }
+        </div>
+      </Card>
     )
   }
 

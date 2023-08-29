@@ -91,10 +91,11 @@ const Inquirewrapper = styled.div`
     width: inherit;
     .ant-card-head {
       font-size: 12px;
-      padding: 10px;
+      padding-top: 10px;
       border-bottom: none;
       color: #999;
       min-width: 285px;
+      min-height: 8px;
     }
     .ant-card-body {
       padding: 10px;
@@ -102,6 +103,12 @@ const Inquirewrapper = styled.div`
     &.scale-up-center {
 	    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    .card-wrap {
+      .ant-btn-default {
+        margin: 5px;
+        font-size: 12px;
+      }
     }
   }
 `
