@@ -18,7 +18,8 @@ const systemStore= (): ISystemStore => {
     setSystemInfo: function (value: ISystemInfo) {
       this.systemInfo = {
         ...this.systemInfo,
-        ...value}
+        ...value
+      }
     }
   }
 }

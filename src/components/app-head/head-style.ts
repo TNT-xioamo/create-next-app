@@ -82,5 +82,25 @@ const Activitywrapper = styled.div<Custom>`
     }
   }
 `
+const Inquirewrapper = styled.div`
+  position: relative;
+  .pos-card {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: inherit;
+    .ant-card-head {
+      font-size: 12px;
+      padding: 10px;
+      border-bottom: none;
+      color: #999;
+      min-width: 285px;
+    }
+    &.scale-up-center {
+	    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+  }
+`
 
-export { Headwrapper, Menuwrapper, Activitywrapper }
+export { Headwrapper, Menuwrapper, Activitywrapper, Inquirewrapper }
