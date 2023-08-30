@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { StrictMode } from 'react'
 import Head from 'next/head'
 import Layout from '../layouts/app-basic'
 import type { NextPage } from 'next'
@@ -32,7 +32,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? getDefaultLayout
 
   return (
-    <Fragment>
+    <StrictMode>
       <Head>
         <title>{title}</title>
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
@@ -42,7 +42,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
           {getLayout(<Component {...pageProps} />, pageProps)}
         </StoreProvider>
       </ConfigProvider>
-    </Fragment>
+    </StrictMode>
   );
 }
 

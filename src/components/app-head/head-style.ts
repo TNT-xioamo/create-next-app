@@ -2,9 +2,10 @@ import styled from 'styled-components'
 type Custom = {
   $img1?: string
   $img2?: string
+  $showhot?: any
 }
 //  @extend .logo-wrapper;
-const Headwrapper = styled.div`
+const Headwrapper = styled.div<Custom>`
   height: 65px;
   /* background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%); */
   font-family: Avenir,Helvetica,Arial,sans-serif !important;
@@ -14,7 +15,8 @@ const Headwrapper = styled.div`
   border-bottom: 1px solid #eaeaea;
   min-width: inherit;
   position: sticky;
-  top: 0;
+  top: ${ props => props?.$showhot ? '50px' : '0px' };
+  z-index: 2;
   .wrappe-content {
     width: 1200px;
     margin: 0 auto;
@@ -54,6 +56,8 @@ const Menuwrapper = styled.div`
 `
 
 const Activitywrapper = styled.div<Custom>`
+    position: sticky;
+    top: 0;
   > :hover {
     -webkit-animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	  animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -66,8 +70,6 @@ const Activitywrapper = styled.div<Custom>`
     background-image: url(${ props => props?.$img1 || '' });
     height: 50px;
     cursor: pointer;
-    position: sticky;
-    top: 0;
     .wrapper-content {
       background-image: url(${ props => props?.$img2 || '' });
       height: 100%;

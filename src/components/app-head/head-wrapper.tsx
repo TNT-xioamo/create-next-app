@@ -1,16 +1,21 @@
 import React, { type PropsWithChildren, memo } from 'react'
 
 import { Headwrapper } from './head-style'
+import { useStore } from '@/store'
 
 import HeadLogo from './head-logo'
 import HeadMenuWrapper from './head-menu'
 import HeadInquireWrapper from './head-inquire'
 import HeadnrollloginWrapper from './head-enroll-login'
+import { observer } from 'mobx-react-lite'
 
-export default memo(function AppHeadwrapper(props: PropsWithChildren<{}>) {
+function AppHeadwrapper(props: PropsWithChildren<{}>) {
+  const { systemStore } = useStore()
+  const { showHotBar } = systemStore.systemInfo || false
+
   return(
     <>
-      <Headwrapper>
+      <Headwrapper $showhot={showHotBar}>
         <div className='wrappe-content f-c-sa'>
           <HeadLogo />
           <HeadMenuWrapper />
@@ -20,4 +25,6 @@ export default memo(function AppHeadwrapper(props: PropsWithChildren<{}>) {
       </Headwrapper>
     </>
   )
-})
+}
+
+export default observer(AppHeadwrapper)

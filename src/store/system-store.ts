@@ -2,7 +2,8 @@ export type ISystemInfo = {
   isShowDrawer?: boolean,
   defstyle?: boolean,
   showDrawer?: boolean,
-  isShowSuggest?: boolean
+  isShowSuggest?: boolean,
+  showHotBar?: boolean
 }
 
 export interface ISystemStore {
@@ -14,6 +15,7 @@ const systemStore= (): ISystemStore => {
   return {
     systemInfo: {
       isShowSuggest: false,
+      showHotBar: true,
     },
     setSystemInfo: function (value: ISystemInfo) {
       this.systemInfo = {
