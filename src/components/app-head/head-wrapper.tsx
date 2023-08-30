@@ -1,4 +1,4 @@
-import React, { type PropsWithChildren, memo } from 'react'
+import React, { type PropsWithChildren } from 'react'
 
 import { Headwrapper } from './head-style'
 import { useStore } from '@/store'
@@ -9,7 +9,7 @@ import HeadInquireWrapper from './head-inquire'
 import HeadnrollloginWrapper from './head-enroll-login'
 import { observer } from 'mobx-react-lite'
 
-function AppHeadwrapper(props: PropsWithChildren<{}>) {
+function AppHeadwrapper(props: PropsWithChildren<{}>): JSX.Element {
   const { systemStore } = useStore()
   const { showHotBar } = systemStore.systemInfo || false
 

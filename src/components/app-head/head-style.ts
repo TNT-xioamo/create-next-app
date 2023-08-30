@@ -50,6 +50,7 @@ const Headwrapper = styled.div<Custom>`
 const Menuwrapper = styled.div`
   display: flex;
   flex: 1;
+  user-select: none;
   .hover-color:hover {
     color: #287ef1;
   }
@@ -58,6 +59,7 @@ const Menuwrapper = styled.div`
 const Activitywrapper = styled.div<Custom>`
     position: sticky;
     top: 0;
+    z-index: 1;
   > :hover {
     -webkit-animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	  animation: shadow-drop-2-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
